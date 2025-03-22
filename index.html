@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Controle de Gastos</title>
+    <link rel="stylesheet" href="style.css" > <!-- Link para o arquivo CSS externo -->
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Controle de Gastos</h1>
+    </header>
+    <main>
+        <div class="card">
+            <h3>Total de Gastos: R$ <span id="total-expenses">0.00</span></h3>
+        </div>
+        <div class="add-expense">
+            <input type="text" id="expense-name" placeholder="Descrição do Gasto">
+            <input type="number" id="expense-amount" placeholder="Valor (R$)">
+            <button id="add-expense-btn">Adicionar Gasto</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor (R$)</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-table">
+                    <!-- Gastos serão adicionados aqui -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
