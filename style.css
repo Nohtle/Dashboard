@@ -1,78 +1,104 @@
+/* Estilo geral */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #0F9E99;
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 main {
     padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .card {
     background: white;
-    border-radius: 8px;
+    border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-    padding: 1rem;
-}
-
-.card h3 {
-    margin: 0;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0F9E99;
 }
 
 .add-expense {
     margin-top: 1rem;
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .add-expense input, .add-expense button {
-    padding: 0.5rem;
+    padding: 0.8rem;
     font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    outline: none;
 }
 
 .add-expense input {
     flex: 1;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.add-expense input:focus {
+    border-color: #0F9E99;
+    box-shadow: 0 0 4px rgba(15, 158, 153, 0.5);
 }
 
 .add-expense button {
-    background-color: #4CAF50;
+    background-color: #0F9E99;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 .add-expense button:hover {
-    background-color: #45a049;
+    background-color: #0d8c88;
 }
 
 .table-container {
     margin-top: 2rem;
+    overflow-x: auto;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 table th, table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px 16px;
     text-align: left;
+    font-size: 0.9rem;
 }
 
 table th {
-    background-color: #4CAF50;
+    background-color: #0F9E99;
     color: white;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 table tr:nth-child(even) {
@@ -80,18 +106,35 @@ table tr:nth-child(even) {
 }
 
 table tr:hover {
-    background-color: #f1f1f1;
+    background-color: #e9f7f6;
 }
 
 table td button {
-    background-color: #f44336;
+    background-color: #e74c3c;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 6px 12px;
     cursor: pointer;
     border-radius: 4px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
 }
 
 table td button:hover {
-    background-color: #d32f2f;
+    background-color: #c0392b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .add-expense {
+        flex-direction: column;
+    }
+
+    .add-expense input, .add-expense button {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 0.8rem;
+    }
 }
