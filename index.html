@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Controle de Gastos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1><i class="fas fa-chart-line"></i> Dashboard de Controle de Gastos</h1>
+        </div>
+    </header>
+    
+    <main>
+        <section class="dashboard-summary">
+            <div class="card total-card">
+                <i class="fas fa-money-bill-wave card-icon"></i>
+                <h3>Total de Gastos</h3>
+                <p class="amount">R$ <span id="total-expenses">0.00</span></p>
+            </div>
+        </section>
+        
+        <section class="expense-form">
+            <div class="section-header">
+                <h2><i class="fas fa-plus-circle"></i> Adicionar Novo Gasto</h2>
+            </div>
+            <div class="add-expense">
+                <div class="input-group">
+                    <i class="fas fa-tag input-icon"></i>
+                    <input type="text" id="expense-name" placeholder="Descrição do Gasto">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-dollar-sign input-icon"></i>
+                    <input type="number" id="expense-amount" placeholder="Valor (R$)">
+                </div>
+                <button id="add-expense-btn"><i class="fas fa-plus"></i> Adicionar Gasto</button>
+            </div>
+        </section>
+        
+        <section class="expense-list">
+            <div class="section-header">
+                <h2><i class="fas fa-list-ul"></i> Histórico de Gastos</h2>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-tag"></i> Descrição</th>
+                            <th><i class="fas fa-dollar-sign"></i> Valor (R$)</th>
+                            <th><i class="fas fa-cog"></i> Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-table">
+                        <!-- Gastos serão adicionados aqui via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Dashboard de Controle de Gastos</p>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>
